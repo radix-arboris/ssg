@@ -1,0 +1,65 @@
+body {
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+#maintitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-top: 2%;
+    text-align: center;  
+}
+
+#div-generator {
+    text-align: center;
+}
+
+/*
+#abouttitle {
+    font-family: fantasy;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5%;
+}
+
+#about {
+    text-align: center;
+    padding-bottom: 5%;
+}
+*/
+
+#create {
+    text-align: center;
+}
+
+#how2title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#how2 {
+    float: right;
+    text-align: left;
+    margin-right: 40%;
+    margin-top: auto;
+}
+
+#formativeform {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#over1 {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+#over2 {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}

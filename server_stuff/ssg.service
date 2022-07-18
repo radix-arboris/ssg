@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve the SSG project
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/mnt/dbs_vol1/ssg
+Environment="PATH=/mnt/dbs_vol1/ssg/ssg/bin"
+ExecStart=/mnt/dbs_vol1/ssg/ssg/bin/uwsgi --ini ssg.ini
+
+[Install]
+WantedBy=multi-user.target
