@@ -1,6 +1,6 @@
 #!/bin/bash
 systemctl stop ssg
-git clean
+git clean -f
 git reset --hard HEAD
 git pull
 chmod -R 777 $PWD
