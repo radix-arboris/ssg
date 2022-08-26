@@ -22,16 +22,15 @@ def Generate_Schedule(dnt, topic_name, description, t2s, rem_study_weekends):
     dnt+timedelta(days=28),
     dnt+timedelta(days=84)]
 
+
     if rem_study_weekends == "yes":
         #print("\n[+] Modifying dates to study to only be on weekdays...")
-        for studyday in dates2study:
-            if studyday.weekday() >= 4:
-                pass
-            else:
-                if studyday.weekday() == 5:
-                    new_studyday = studyday+timedelta(days=2)
-                elif studyday.weekday() == 6:
-                    new_studyday = studyday+timedelta(days=1)
+        for studyday in dates2study[1:]:
+            if studyday.weekday() == 5:
+                new_studyday = studyday + timedelta(days=2)
+                dates2study[dates2study.index(studyday)] = new_studyday
+            elif studyday.weekday() == 6:
+                new_studyday = studyday + timedelta(days=1)
                 dates2study[dates2study.index(studyday)] = new_studyday
 
 
