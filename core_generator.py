@@ -13,6 +13,8 @@ def Generate_Schedule(dnt, topic_name, description, t2s, rem_study_weekends):
     if path.isdir(outdir) == False:
         mkdir(outdir)
 
+    if dnt == "":
+        dnt = str(date.today())
     dnt = datetime.strptime(dnt, "%Y-%m-%d").date()
     #new_dnt = str(dnt).replace("-", "")
 
