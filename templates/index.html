@@ -7,16 +7,21 @@
   <body>
     <div id="div-generator">
       <h1 id="maintitle">Study Schedule Generator</h1>
-      <a href="https://github.com/radix-arboris/ssg";>Project Github </a>
+      <p><a href="https://github.com/radix-arboris/ssg";>Project Github</a> • <a href="how2">How to Use</a> </p>
       <br />
-      <hr style="width: 20%;"/>
+      <hr id="divider"/>
       <br />
       <form method = "POST" id="formativeform">
+        <p>DNT: <input id = "dnt" type="date" name = "dnt" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
         <p>Topic to Study: <input type = "text" name = "topic" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
         <p>Breif Description: <input type = "text" name = "description" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
         <p>Remove Studying on Weekends? <input type="checkbox" name="rem_study_weekends" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
         <p>Select A Time To Study:</p>
         <p><select name="t2s" size=5 style="width:60px; color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);">
+          <option value="050000">05:00</option>
+          <option value="051500">05:15</option>
+          <option value="053000">05:30</option>
+          <option value="054500">05:45</option>
           <option value="060000">06:00</option>
           <option value="061500">06:15</option>
           <option value="063000">06:30</option>
@@ -86,36 +91,6 @@
         <p>Clear Form? <input type="checkbox" name="clear" value="yes" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
         <p><input type = "submit" value = "Send It" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
       </form>
-    </div>
-    <br />
-    <hr style="width: 50%;"/>
-    <br />
-    <!--
-    <div>
-      <h2 id="abouttitle">About</h2>
-      <p id="about">This website serves as a tool to generate study schedules for importing to google calender.</p>
-    </div>
-    -->
-    <div>
-      <h1 id="how2title">How does it work?</h2>
-      <ol id="how2">
-        <p id="over1">Generating a Schedule...</p>
-        <li>Name Your Topic to Study</li>
-        <li>Briefly Describe Your Topic</li>
-        <li>Select Whether or Not to Allow Studying on Weekends</li>
-        <li>Select a Time to Study</li>
-        <li>Click The 'Send It' Button & Download the .ics file</li>
-        <li>If no data is entered, example data will be generated.</li>
-        <li>To easily clear your input, select the 'Clear Form' option, and click the 'Send It' button</li>
-        <p id="over1">Importing to Google Calender...</p>
-        <li>In Google Calender, click the 'Settings' icon in the top right</li>
-        <li>Click 'Settings'</li>
-        <li>On the left side, toward the middle, click 'Import & Export'</li>
-        <li>Click 'Select File'
-        <li>Select the new .ics file</li>
-        <li>To switch calenders when importing, change the 'Add to Calender' value</li>
-        <li>Click 'Import'</li>
-      </ol>
     </div>
   </body>
 </html>

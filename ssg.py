@@ -9,11 +9,16 @@ app = Flask(__name__)
 def schedule_home():
     return render_template('index.html')
 
+@app.route('/how2')
+def how2():
+    return render_template('how2.html')
+
 @app.route('/', methods=["POST"])
 def schedule_gen():
     if request.form.get("clear"):
         return redirect("/")
     else:
+        dnt = request.form.get("dnt")
         topic_name = request.form['topic']
         description = request.form['description']
         if request.form.get("rem_study_weekends"):
@@ -28,7 +33,7 @@ def schedule_gen():
             description = "Review of: "+topic_name
         if not request.form.get("rem_study_weekends"):
             rem_study_weekends = "no"
-        new_schedule = Generate_Schedule(topic_name, description, t2s, rem_study_weekends)
+        new_schedule = Generate_Schedule(dnt, topic_name, description, t2s, rem_study_weekends)
         @app.after_request
         def rem_file(response):
             if path.exists(new_schedule):
