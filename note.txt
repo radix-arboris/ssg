@@ -1,0 +1,36 @@
+https://www.google.com/calendar/render?action=TEMPLATE&text=How%20We%20Built%20Financial%20Fortunes%20in%20Real%20Estate&dates=20221022T210000Z%2F20221022T222433Z&details=Webinar%20Event%3A%20How%20We%20Built%20Financial%20Fortunes%20in%20Real%20Estate%20on%20Saturday%3A%20October%2022%20%40%201%3A00PM%20AKDT&location=https%3A%2F%2Fjoinnow.live%2Fa%2Flm4HSp%3Fid%3DQU30iG
+
+https://www.google.com/calendar/render?action=TEMPLATE&text=How We Built Financial Fortunes in Real Estate&dates=20221022T210000Z/20221022T222433Z&details=Webinar Event: How We Built Financial Fortunes in Real Estate on Saturday: October 22 @ 1:00PM AKDT&location=https://joinnow.live/a/lm4HSp?id=QU30iG
+
+
+
+https://outlook.live.com/calendar/0/deeplink/compose?body=Webinar%20Event%3A%20How%20We%20Built%20Financial%20Fortunes%20in%20Real%20Estate%20on%20Saturday%3A%20October%2022%20%40%201%3A00PM%20AKDT&enddt=2022-10-22T22%3A24%3A33Z&location=https%3A%2F%2Fjoinnow.live%2Fa%2Flm4HSp%3Fid%3DQU30iG&path=%2Fcalendar%2Faction%2Fcompose&startdt=2022-10-22T21%3A00%3A00Z&subject=How%20We%20Built%20Financial%20Fortunes%20in%20Real%20Estate
+
+https://outlook.live.com/calendar/0/deeplink/compose?body=Webinar Event: How We Built Financial Fortunes in Real Estate on Saturday: October 22 @ 1:00PM AKDT&enddt=2022-10-22T22:24:33Z&location=https://joinnow.live/a/lm4HSp?id=QU30iG&path=/calendar/action/compose&startdt=2022-10-22T21:00:00Z&subject=How We Built Financial Fortunes in Real Estate
+
+
+
+https://outlook.office.com/calendar/0/deeplink/compose?body=Rich%20Dad%E2%80%99s%20Secrets%20to%20Increasing%20Your%20Cash%20Flow%20TODAY%21&enddt=2022-10-22T22%3A00%3A00%2B00%3A00&location=https%3A%2F%2Fjoinnow.live%2Fa%2Fup5FBA%3Fid%3DnSkLuA&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2022-10-22T21%3A00%3A00%2B00%3A00&subject=Rich%20Dad%E2%80%99s%20Secrets%20to%20Increasing%20Your%20Cash%20Flow%20TODAY%21
+
+https://outlook.office.com/calendar/0/deeplink/compose?body=Rich Dad’s Secrets to Increasing Your Cash Flow TODAY!&enddt=2022-10-22T22:00:00+00:00&location=https://joinnow.live/a/up5FBA?id=nSkLuA&path=/calendar/action/compose&rru=addevent&startdt=2022-10-22T21:00:00+00:00&subject=Rich Dad’s Secrets to Increasing Your Cash Flow TODAY!
+
+
+
+https://calendar.yahoo.com/?desc=Rich%20Dad%E2%80%99s%20Secrets%20to%20Increasing%20Your%20Cash%20Flow%20TODAY%21&et=20221022T220000Z&in_loc=https%3A%2F%2Fjoinnow.live%2Fa%2Fup5FBA%3Fid%3DnSkLuA&st=20221022T210000Z&title=Rich%20Dad%E2%80%99s%20Secrets%20to%20Increasing%20Your%20Cash%20Flow%20TODAY%21&v=60
+
+https://calendar.yahoo.com/?desc=Rich Dad’s Secrets to Increasing Your Cash Flow TODAY!&et=20221022T220000Z&in_loc=https://joinnow.live/a/up5FBA?id=nSkLuA&st=20221022T210000Z&title=Rich Dad’s Secrets to Increasing Your Cash Flow TODAY!&v=60
+
+
+
+
+data:text/calendar;charset=utf8,BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:20221022T210000Z
+DTEND:20221022T222433Z
+SUMMARY:How We Built Financial Fortunes in Real Estate
+DESCRIPTION:Webinar Event: How We Built Financial Fortunes in Real Estate on Saturday: October 22 @ 1:00PM AKDT
+LOCATION:https://joinnow.live/a/lm4HSp?id=QU30iG
+END:VEVENT
+END:VCALENDAR
+

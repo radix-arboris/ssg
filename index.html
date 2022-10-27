@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study Schedule Generator</title>
+    <link rel="stylesheet" href="static/css/main.css">
+  </head>
+  <body>
+    <div id="div-generator">
+      <h1 id="maintitle">Study Schedule Generator</h1>
+      <p><a href="https://github.com/radix-arboris/ssg";>Project Github</a> | <a href="how2">How to Use</a> </p>
+      <br />
+      <hr id="divider"/>
+      <br />
+      <form method = "POST" id="formativeform">
+        <p>DNT: <input id = "dnt" type="date" name = "dnt" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
+        <p>Topic to Study: <input type = "text" name = "topic" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
+        <p>Breif Description: <input type = "text" name = "description" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+        <p>Remove Studying on Weekends? <input type="checkbox" name="rem_study_weekends" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+        <p>Select A Time To Study:</p>
+        <p><select name="t2s" size=5 style="width:60px; color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);">
+          <option value="050000">05:00</option>
+          <option value="051500">05:15</option>
+          <option value="053000">05:30</option>
+          <option value="054500">05:45</option>
+          <option value="060000">06:00</option>
+          <option value="061500">06:15</option>
+          <option value="063000">06:30</option>
+          <option value="064500">06:45</option>
+          <option value="070000">07:00</option>
+          <option value="071500">07:15</option>
+          <option value="073000">07:30</option>
+          <option value="074500">07:45</option>
+          <option value="080000">08:00</option>
+          <option value="081500">08:15</option>
+          <option value="083000">08:30</option>
+          <option value="084500">08:45</option>
+          <option value="090000">09:00</option>
+          <option value="091500">09:15</option>
+          <option value="093000">09:30</option>
+          <option value="094500">09:45</option>
+          <option value="100000">10:00</option>
+          <option value="101500">10:15</option>
+          <option value="103000">10:30</option>
+          <option value="104500">10:45</option>
+          <option value="110000">11:00</option> 
+          <option value="111500">11:15</option>
+          <option value="113000">11:30</option>
+          <option value="114500">11:45</option>
+          <option value="120000">12:00</option>
+          <option value="121500">12:15</option>
+          <option value="123000">12:30</option>
+          <option value="124500">12:45</option>
+          <option value="130000">13:00</option>
+          <option value="131500">13:15</option>
+          <option value="133000">13:30</option>
+          <option value="134500">13:45</option>
+          <option value="140000">14:00</option>
+          <option value="141500">14:15</option>
+          <option value="143000">14:30</option>
+          <option value="144500">14:45</option>
+          <option value="150000">15:00</option>
+          <option value="151500">15:15</option>
+          <option value="153000">15:30</option>
+          <option value="154500">15:45</option>
+          <option value="160000">16:00</option>
+          <option value="161500">16:15</option>
+          <option value="163000">16:30</option>
+          <option value="164500">16:45</option>
+          <option value="170000">17:00</option>
+          <option value="171500">17:15</option>
+          <option value="173000">17:30</option>
+          <option value="174500">17:45</option>
+          <option value="180000">18:00</option>
+          <option value="181500">18:15</option>
+          <option value="183000">18:30</option>
+          <option value="184500">18:45</option>
+          <option value="190000">19:00</option>
+          <option value="191500">19:15</option>
+          <option value="193000">19:30</option>
+          <option value="194500">19:45</option>
+          <option value="200000">20:00</option>
+          <option value="201500">20:15</option>
+          <option value="203000">20:30</option>
+          <option value="204500">20:45</option>
+          <option value="210000">21:00</option>
+          <option value="211500">21:15</option>
+          <option value="213000">21:30</option>
+          <option value="214500">21:45</option>
+          <option value="220000">22:00</option>
+        </select></p>
+        <p>Clear Form? <input type="checkbox" name="clear" value="yes" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+        <p><input type = "submit" value = "Send It" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+      </form>
+    </div>
+  </body>
+</html>
