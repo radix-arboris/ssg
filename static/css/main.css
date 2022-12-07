@@ -3,6 +3,14 @@ body {
     background-color: black;
 }
 
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+
+}
+
 #maintitle {
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
