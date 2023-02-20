@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study Schedule Generator</title>
+    <link rel="stylesheet" href="static/css/main.css">
+  </head>
+  <body>
+    <div id="div-generator">
+      <a href="/"><img src="static/imgs/ssg.webp" id="logo" /></a>
+      <h1 id="maintitle">Study Schedule Generator</h1>
+      <p><a href="https://github.com/radix-arboris/ssg";>Project Github</a> | <a href="/how2.html">How to Use</a> </p>
+      <br />
+      <hr id="divider"/>
+      <br />
+      <p id="error">Please complete the form before submitting!<p>
+      <form method="POST" id="formativeform">
+        <p>DNT: <input type="date" id = "dnt" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
+        <p>Topic to Study: <input type = "text" id = "topic" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);" /></p>
+        <p>Breif Description: <input type = "text" id = "description" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+        <p>Select A Time To Study:</p>
+        <p><select id="t2s" size=5 style="width:60px; color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);">
+          <option value="0500">05:00</option>
+          <option value="0515">05:15</option>
+          <option value="0530">05:30</option>
+          <option value="0545">05:45</option>
+          <option value="0600">06:00</option>
+          <option value="0615">06:15</option>
+          <option value="0630">06:30</option>
+          <option value="0645">06:45</option>
+          <option value="0700">07:00</option>
+          <option value="0715">07:15</option>
+          <option value="0730">07:30</option>
+          <option value="0745">07:45</option>
+          <option value="0800">08:00</option>
+          <option value="0815">08:15</option>
+          <option value="0830">08:30</option>
+          <option value="0845">08:45</option>
+          <option value="0900">09:00</option>
+          <option value="0915">09:15</option>
+          <option value="0930">09:30</option>
+          <option value="0945">09:45</option>
+          <option value="1000">10:00</option>
+          <option value="1015">10:15</option>
+          <option value="1030">10:30</option>
+          <option value="1045">10:45</option>
+          <option value="1100">11:00</option> 
+          <option value="1115">11:15</option>
+          <option value="1130">11:30</option>
+          <option value="1145">11:45</option>
+          <option value="1200">12:00</option>
+          <option value="1215">12:15</option>
+          <option value="1230">12:30</option>
+          <option value="1245">12:45</option>
+          <option value="1300">13:00</option>
+          <option value="1315">13:15</option>
+          <option value="1330">13:30</option>
+          <option value="1345">13:45</option>
+          <option value="1400">14:00</option>
+          <option value="1415">14:15</option>
+          <option value="1430">14:30</option>
+          <option value="1445">14:45</option>
+          <option value="1500">15:00</option>
+          <option value="1515">15:15</option>
+          <option value="1530">15:30</option>
+          <option value="1545">15:45</option>
+          <option value="1600">16:00</option>
+          <option value="1615">16:15</option>
+          <option value="1630">16:30</option>
+          <option value="1645">16:45</option>
+          <option value="1700">17:00</option>
+          <option value="1715">17:15</option>
+          <option value="1730">17:30</option>
+          <option value="1745">17:45</option>
+          <option value="1800">18:00</option>
+          <option value="1815">18:15</option>
+          <option value="1830">18:30</option>
+          <option value="1845">18:45</option>
+          <option value="1900">19:00</option>
+          <option value="1915">19:15</option>
+          <option value="1930">19:30</option>
+          <option value="1945">19:45</option>
+          <option value="2000">20:00</option>
+          <option value="2015">20:15</option>
+          <option value="2030">20:30</option>
+          <option value="2045">20:45</option>
+          <option value="2100">21:00</option>
+          <option value="2115">21:15</option>
+          <option value="2130">21:30</option>
+          <option value="2145">21:45</option>
+          <option value="2200">22:00</option>
+        </select></p>
+        <p><input type = "submit" value = "Send It" style="color: rgb(255, 255, 255); background-color : rgb(82, 82, 82);"/></p>
+      </form>
+      <!-- add a button to clear the form and refresh the page -->
+      <button onClick="window.location.reload();">Clear Form</button>
+    </div>
+
+    <script>
+      //hide the error
+      document.getElementById("error").style.display = "none";
+
+      const form = document.getElementById("formativeform");
+
+      function gen_uuid(length) {
+        const chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+          result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
+      }
+
+      function get_dates_to_study(today){
+        // get the dates of the days 0,1,7,28 days after today
+        var num_days = [0, 1, 7, 28]; // append 84 if not worried about school semester ending
+        var new_dates = [];
+
+        var toDay = new Date();
+        var curr_date = toDay.getDate();
+        var curr_month = toDay.getMonth();
+        var curr_year = toDay.getFullYear();
+        // for num_days in num_days, add to new dates
+        for (var i = 0; i < num_days.length; i++) {
+          var new_date = new Date(curr_year, curr_month, curr_date + num_days[i]);
+          // convert date to YYYY-MM-DD
+          dateStr = new_date.getFullYear() + "-" + new_date.getMonth() + "-" + new_date.getDate();
+          var d = new Date(dateStr);
+          if (!isNaN(d.getTime())) {
+            // Date is valid
+            new_dates.push(new_date);
+          }
+        }
+
+        // normalize dates to be in the form YYYYMMDD
+        for (var i = 0; i < new_dates.length; i++) {
+          var year = new_dates[i].getFullYear();
+          var month = new_dates[i].getMonth() + 1;
+          var day = new_dates[i].getDate();
+          if (month < 10) {
+            month = "0" + month;
+          }
+          if (day < 10) {
+            day = "0" + day;
+          }
+          new_dates[i] = year + month + day;
+        }
+
+        console.log(new_dates);
+        return new_dates;
+
+      }
+
+      function make_big_string(topic, description, t2s, date, uuid) {
+        var big_string = "BEGIN:VEVENT\nVERSION:2.0\n";
+        big_string += "DTSTART:" + date + "T" + t2s + "00" + "Z\n";
+        big_string += "DTEND:" + date + "T" + t2s + "00" + "Z\n";
+        big_string += "DTSTAMP:20230220T120021Z\n";
+        big_string += "UID:" + uuid + topic.replace(/\s/g, '_') + "@google.com\n";
+        big_string += "CLASS:PUBLIC\n";
+        big_string += "DESCRIPTION: " + description + "\n";
+        big_string += "LOCATION:\nSEQUENCE:0\nSTATUS:CONFIRMED\n";
+        big_string += "SUMMARY:Study - " + topic + "\n";
+        big_string += "TRANSP:OPAQUE\nEND:VEVENT\n\n";
+        return big_string;
+      }
+
+      // when form is submitted
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // get data from form
+        var dnt = document.getElementById("dnt").value;
+        var topic = document.getElementById("topic").value;
+        var description = document.getElementById("description").value;
+        var t2s = document.getElementById("t2s").value;
+
+        console.log(dnt);
+        console.log(topic);
+        console.log(description);
+        console.log(t2s);
+        
+        // if any fields are blank, display error message
+        if (dnt == "" || topic == "" || description == "" || t2s == "") {
+          document.getElementById("error").style.display = "block";
+        } else {
+          // if all fields are filled, hide error message
+          document.getElementById("error").style.display = "none";
+          // make big string for every date and append to bigger string
+          var bigger_string = "BEGIN:VCALENDAR\n";
+          var dates_to_study = get_dates_to_study(dnt);
+          var uuid = "STUDY_Topic_";
+          for (var i = 0; i < dates_to_study.length; i++) {
+            bigger_string += make_big_string(topic, description, t2s, dates_to_study[i], uuid);
+          }
+          bigger_string += "END:VCALENDAR\n";
+          // make a link to download the file
+          var link = document.createElement("a");
+          link.download = "test.ics";
+          link.href = "data:text/calendar;charset=utf-8," + escape(bigger_string);
+          link.click();
+        }
+      });
+
+    
+      //get_dates_to_study();
+    </script>
+  </body>
+</html>
